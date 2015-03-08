@@ -29,6 +29,6 @@ if __name__ == '__main__':
     tornado.options.parse_command_line()
 
 
-    http_server = tornado.httpserver.HTTPServer(MedxApplication())
+    http_server = tornado.httpserver.HTTPServer(ManApplication())
     http_server.listen(options.port)
     tornado.ioloop.IOLoop.instance().start()
