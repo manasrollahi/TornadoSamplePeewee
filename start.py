@@ -7,10 +7,10 @@ import tornado.web
 from tornado.options import define, options
 from urls import urlList
 
-define("port", default=8090, help="run on the given port", type=int)
+define("port", default=8080, help="run on the given port", type=int)
 #Test
 # Your app launch code here..
-class MedxApplication(tornado.web.Application):
+class haniApplication(tornado.web.Application):
 
     def __init__(self):
         # self.db = ["Medex"]
@@ -29,6 +29,6 @@ if __name__ == '__main__':
     tornado.options.parse_command_line()
 
 
-    http_server = tornado.httpserver.HTTPServer(MedxApplication())
+    http_server = tornado.httpserver.HTTPServer(haniApplication())
     http_server.listen(options.port)
     tornado.ioloop.IOLoop.instance().start()
