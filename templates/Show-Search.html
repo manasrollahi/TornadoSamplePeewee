@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> جستجو </title>
+    <link href='{{ static_url("css/bootstrap.css") }}' rel="stylesheet">
+    <link href='{{ static_url("css/bootstrap-theme.css") }}' rel="stylesheet">
+    <link href='{{ static_url("css/basic.css") }}' rel="stylesheet">
+</head>
+<body style="direction: rtl">
+    <section class="row" style="direction: rtl">
+    <section class="col-md-8 col-md-offset-2">
+    <h3 class="Yekan" style="color:#2233dd"> نتیجه ی جستجوی شما ... </h3>
+    {%for n in news%}
+    <section class="row">
+        <section class="col-md-2">
+
+         </section>
+        <section class="col-md-2">
+                <a class="btn" href="#" > <span class="glyphicon glyphicon-ok-circle"></span>&nbsp;&nbsp; ادامه ... </abutton></a>
+            </section>
+            <section class="col-md-4">
+                <h3>{{n.title}}</h3>
+            </section>
+    </section>
+    {%end%}
+        </section>
+        </section>
+</body>
+</html>

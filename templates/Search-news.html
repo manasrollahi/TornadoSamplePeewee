@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> جستجوی خبر </title>
+
+    <link href='{{ static_url("css/bootstrap.css") }}' rel="stylesheet">
+    <link href='{{ static_url("css/bootstrap-theme.css") }}' rel="stylesheet">
+    <link href='{{ static_url("css/basic.css") }}' rel="stylesheet">
+
+</head>
+<body style="direction: rtl">
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+    <section class="row">
+        <section class="col-md-8 col-md-offset-2 ">
+             <form enctype="multipart/form-data" method="post" action="/search">
+                <input type="text" id="srch" name="srch" value="" placeholder="جستجو"/>
+
+                 <input type="submit" class="btn btn-primary Yekan" value="جستجو">
+            </form>
+        </section>
+    </section>
+
+
+</body>
+</html>
