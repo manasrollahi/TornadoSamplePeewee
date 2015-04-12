@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head><title> ورود خبر جدید </title>
+<link href='{{ static_url("css/bootstrap.css") }}' rel="stylesheet">
+<link href='{{ static_url("css/bootstrap-theme.css") }}' rel="stylesheet">
+    <link href='{{ static_url("css/basic.css") }}' rel="stylesheet">
+<script>
+//function myFunction() {
+//    var x = document.getElementById("news-img").type;
+//    document.getElementById('news-img').innerHTML = x;
+//}
+    </script>
+
+</head>
+<body style="direction:rtl">
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+<div class="row">
+    <div class="col-md-8 col-md-offset-2 ">
+        <h3 class="Yekan" style="color:#2233dd"> خبر جدید : </h3>
+          <form enctype="multipart/form-data" method="post" action="/news/new">
+
+              <div class="form-group">
+                  <label for="news-title" class="control-label Mitra" >عنوان خبر :</label>
+                  <input type="text" name="news-title" id="news-title" value="" placeholder=" عنوان خبر را وارد کنید.....! " class="form-control" />
+              </div>
+
+              <div class="form-group">
+                  <label for="news-body" class="control-label Mitra" >متن خبر :</label>
+                  <input type="text"  name="news-body" id="news-body" value="" placeholder="متن خبر را وارد کنید.....! " class="form-control" />
+              </div>
+
+              <div class="form-group">
+                  <label for="news-cat" class="control-label Mitra" > نوع خبر :  </label>
+                  <br>
+                  <select name="news-cat" id="news-cat" class="form-control">
+                  {% for c in cat %}
+                      <option value={{c.id}}>{{c.name}}</option>
+                  {% end %}
+                  </select>
+              </div>
+
+              <div class="form-group">
+                  <label for="news-aut" class="control-label Mitra" > نویسنده خبر :  </label>
+                  <br>
+                  <select name="news-aut" id="news-aut" class="form-control">
+                  {% for a in aut %}
+                      <option value={{a.id}}>{{a.fn}} {{a.ln}}</option>
+                  {% end %}
+                  </select>
+              </div>
+
+              <input type="hidden" name="news-id" id="news-id" class="form-control" />
+
+              <input type="submit" class="btn btn-primary Yekan" value="ذخیره تغییرات" >
+          </form>
+    </div>
+</div>
+
+</body>
+</html>
